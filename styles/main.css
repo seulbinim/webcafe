@@ -45,16 +45,13 @@ body{
   width: var(--container-size);
   margin: 0 auto;
   background-color: salmon;
-  /* flex container */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  display: flow-root;
+  padding: 0 15px;
 }
 
 .group{
-  /* flex item */
-  display: block;
-  flex-shrink: 0;
+  float: left;
+  margin: 0 15px;
 }
 .group1{
   background-color: lime;
@@ -69,6 +66,10 @@ body{
   width: 190px;
 }
 
+/* 슬로건 */
+.slogan{
+
+}
 
 
 
