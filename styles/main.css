@@ -7,7 +7,7 @@
   --white: #fff;
   --black: #000;
 
-  --container-size: 980px;
+  --container-size: 940px;
   --spacing-lg: 30px;
   --spacing-base: 20px;
   --spacing-sm: 10px;
@@ -32,7 +32,7 @@ body{
 }
 
 /* 레이아웃 */
-.header, .visual, .main, .slogan, .footer-inner{
+.header, .visual, .slogan, .footer-inner{
   /* background-color: yellow; */
   width: var(--container-size);
   padding: 0 var(--spacing-lg);
@@ -42,13 +42,19 @@ body{
 
 /* 메인콘텐츠 */
 .main{
+  width: var(--container-size);
+  margin: 0 auto;
   background-color: salmon;
-  font-size: 0;
+  /* flex container */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .group{
-  display: inline-block;
-  font-size: 16px;
+  /* flex item */
+  display: block;
+  flex-shrink: 0;
 }
 .group1{
   background-color: lime;
