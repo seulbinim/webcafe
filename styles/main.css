@@ -236,8 +236,66 @@ a{
   }
 }
 /* 비주얼 */
+@keyframes moveEffect {
+  0%{
+    font-size: 12px;
+    color: rgba(0,0,0,0);
+    translate: 0 0;
+  }
+  100%{
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+    translate: 400px 75px;
+  }
+}
+
+@keyframes fadeEffect {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 .visual{
-  height: 10vh;
+  height: 120px;
+  position: relative;
+
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top:0;
+    left: 0;
+    animation: fadeEffect 2s infinite alternate ease-in-out running;
+  }
+
+  &::before{
+    background: url("./../assets/bg/ani_flower_01.png") no-repeat 0 -10px, 
+    url("./../assets/bg/ani_flower_02.png") no-repeat 670px 0;
+  }
+
+  &::after{
+    background: url("./../assets/bg/ani_flower_03.png") no-repeat 300px 0, 
+    url("./../assets/bg/ani_flower_04.png") no-repeat 800px 10px;
+    animation-delay: 1s;
+  }
+
+  p{
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: moveEffect 2s forwards ease-in-out running;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .visual {
+    p{
+      animation-play-state: paused;
+    }
+  }
 }
 
 /* 메인콘텐츠 */
