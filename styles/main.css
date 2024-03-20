@@ -59,10 +59,52 @@ a{
   margin: 0 auto;
 }
 
+/* 건너뛰기 링크 */
+/* .skip-nav{
+
+  a{
+    position: absolute;
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    background: var(--black);
+    color: var(--white);
+    z-index: 10;
+    text-align: center;
+    transform: translateY(-100%);
+  }
+
+  a:focus{
+    transform: none;
+  }
+} */
+
+.skip-nav{
+  background: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  translate: 0 -100%;
+
+  &:focus-within{
+    translate: 0 0;
+  }
+
+  a{
+    padding: 8px;
+  }
+}
+
+
 /* 헤더 */
 .header{
   background-color: var(--white);
-  height: 120px;
   position: relative;
 }
 
