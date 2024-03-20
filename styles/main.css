@@ -62,9 +62,25 @@ a{
 /* 헤더 */
 .header{
   background-color: var(--white);
+  height: 120px;
+  position: relative;
 }
 
 /* 로고 */
+.logo{
+  line-height: 1;
+  position: absolute;
+  top: 45px;
+  left: 65px;
+
+  a{
+    display: block;
+
+    img{
+      vertical-align: top;
+    }
+  }
+}
 
 /* 안내 링크 */
 .member{
@@ -90,8 +106,6 @@ a{
     }
   }
 }
-
-
 
 /* 메인 메뉴 */
 
