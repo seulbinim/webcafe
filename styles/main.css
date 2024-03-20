@@ -22,7 +22,6 @@ html{
   font-size: 0.625em;
 }
 
-
 body{
   font-size: 1.4rem;
   --text-color: var(--black);
@@ -47,6 +46,12 @@ body{
   }
 }
 
+/* 링크 스타일 */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 레이아웃 */
 .header, .visual, .slogan, .footer-inner{
   width: var(--container-size);
@@ -54,11 +59,41 @@ body{
   margin: 0 auto;
 }
 
-
 /* 헤더 */
 .header{
   background-color: var(--white);
 }
+
+/* 로고 */
+
+/* 안내 링크 */
+.member{
+  --focus-area: 4px;
+  --link-sm-spacing: 4px;
+  --link-md-spacing: 8px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  padding: var(--focus-area) 0;
+  position: relative;
+  right: calc(var(--link-md-spacing) * -1);
+  
+   li{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+     a{
+      padding: var(--link-sm-spacing) var(--link-md-spacing);
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+/* 메인 메뉴 */
 
 /* 비주얼 */
 .visual{
