@@ -401,6 +401,30 @@ fieldset{
   }
 }
 
+/* 유효성 검사 배너 */
+.validation-list{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  li{
+    width: 100%;
+  }
+
+  a{
+    padding-left: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 30px;
+    align-items: center;
+    border: 1px solid var(--gray300);
+    border-radius: 30px;
+    background: url(./../assets/bg/validation_icon.png) no-repeat 15px 50% /16px 17px,
+    linear-gradient(var(--gray200), var(--gray100));
+  }
+}
+
 /* 슬로건 */
 .slogan{
   background-color: teal;
