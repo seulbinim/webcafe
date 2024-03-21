@@ -492,6 +492,7 @@ fieldset{
   border: 1px solid #ccc;
   border-radius: 15px 15px 0 0;
   padding: 15px 25px 10px;
+  margin-bottom: 20px;
 
   fieldset{
     display: flex;
@@ -530,6 +531,63 @@ fieldset{
     height: 24px;
     padding: 0 10px;
     border-radius: 5px;
+  }
+}
+
+/* 공지사항 및 자료실 */
+.board{
+  background: yellow;
+  position: relative;
+
+  .notice{
+    background: pink;
+  }
+
+  .archive{
+    background: skyblue;
+  }
+
+  ul, .board-more{
+    display: none;
+  }
+
+  .is-select ul, .is-select .board-more{
+    display: block;
+  }
+
+  button{
+    position: absolute;
+    top: 0;
+  }
+  .notice-tab{
+    left: 0;
+  }
+
+  .archive-tab{
+    left: 80px;
+  }
+
+  ul{
+    padding-top: 45px;
+
+    li{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      a{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: lime;
+      }
+    }
+  }
+
+  .board-more{
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
