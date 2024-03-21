@@ -17,6 +17,7 @@
   --orange200: #ed552f;
 
   --yellow: #ff0;
+  --blue: #296897;
 
   --container-size: 940px;
   --spacing-lg: 30px;
@@ -422,6 +423,62 @@ fieldset{
     border-radius: 30px;
     background: url(./../assets/bg/validation_icon.png) no-repeat 15px 50% /16px 17px,
     linear-gradient(var(--gray200), var(--gray100));
+  }
+}
+
+/* 웹 관련 용어 */
+.term{
+  background: var(--gray200) linear-gradient(var(--gray200), var(--gray100));
+  border: 1px solid var(--gray300);
+  border-radius: 5px;
+  padding: 10px 15px;
+
+  .term-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .term-list{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+
+    div{
+      display: flow-root;
+    }
+
+    .term-list-subject{
+      color: var(--blue);
+      font-weight: 500;
+      float: right;
+      width: 145px;
+      margin-bottom: 10px;
+    }
+
+    .term-list-thumbnail{
+      float: left;
+
+      img{
+        vertical-align: top;
+      }
+    }
+
+    .term-list-brief{
+      line-height: 1.5;
+      float: right;
+      width: 145px;
+    }
+
+    .cross{
+      .term-list-subject, .term-list-brief{
+        float: left;
+      }
+
+      .term-list-thumbnail{
+        float: right;
+      }
+    }
   }
 }
 
