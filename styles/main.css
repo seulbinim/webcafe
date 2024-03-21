@@ -16,6 +16,8 @@
   --orange100: #e8852e;
   --orange200: #ed552f;
 
+  --yellow: #ff0;
+
   --container-size: 940px;
   --spacing-lg: 30px;
   --spacing-base: 20px;
@@ -56,6 +58,12 @@ a{
   color: inherit;
   text-decoration: none;
 }
+
+/* 테두리 초기화 */
+fieldset{
+  border: 0 none;
+}
+
 
 /* 레이아웃 */
 .header, .visual, .slogan, .footer-inner{
@@ -302,30 +310,93 @@ a{
 
 /* 메인콘텐츠 */
 .main{
-  height: 60vh;
+  min-height: 400px;
   width: var(--container-size);
   margin: 0 auto;
   background-color: var(--white);
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group{
   float: left;
   margin: 0 15px;
-  border: 1px solid blue;
 }
 .group1{
-  background-color: lime;
   width: 250px;
 }
 .group2{
-  background-color: skyblue;
   width: 380px;
 }
 .group3{
-  background-color: violet;
   width: 190px;
+}
+
+/* 로그인 */
+.login{
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--orange200) radial-gradient(circle at right top, var(--orange100), var(--orange200));
+
+  .login-title{
+    color: var(--yellow);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-indent: 1em;
+    margin-bottom: 15px;
+  }
+
+  .login-form{
+    background-color: var(--white);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+
+    fieldset{
+      position: relative;
+      border-bottom: 1px solid var(--gray300);
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 6px;
+      padding-bottom: 10px;
+    }
+
+    label{
+      display: inline-block;
+      width: 4em;
+    }
+
+    input{
+      width: 90px;
+      border: 1px solid var(--gray300);
+      border-radius: 3px;
+      padding: 2px 2px 2px 8px;
+      height: 22px;
+    }
+
+    button{
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--white);
+      background-color: var(--orange200);
+      font-size: 1.3rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 3px;
+      border: 0;
+    }
+  }
+
+  .sign{
+    background-color: var(--white);
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
 }
 
 /* 슬로건 */
