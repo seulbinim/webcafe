@@ -335,6 +335,8 @@ fieldset{
 
 /* 로그인 */
 .login{
+  box-shadow: 5px 5px 0 0 var(--gray300);
+  margin-bottom: 25px;
   padding: 10px;
   border-radius: 5px;
   background: var(--orange200) radial-gradient(circle at right top, var(--orange100), var(--orange200));
