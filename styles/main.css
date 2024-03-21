@@ -535,7 +535,7 @@ fieldset{
 }
 
 /* 공지사항 및 자료실 */
-.board{
+/* .board{
   background: yellow;
   position: relative;
 
@@ -589,7 +589,36 @@ fieldset{
     top: 0;
     right: 0;
   }
+} */
+
+.board{
+  background: yellow;
+  display: grid;
+  grid-template-columns: 80px 80px 1fr;
+
+  .notice-tab{
+    grid-area: 1/1/2/2;
+  }
+
+  .acrhive-tab{
+    grid-area: 1/2/2/3;
+  }
+
+  .notice-list{
+    grid-area: 2/1/3/4;
+  }
+
+  .notice-more{
+    grid-area: 1/3/2/4;
+    justify-self: end;
+  }
+
+  .archive-list, .archive-more{
+    display: none;
+  }
+
 }
+
 
 /* 슬로건 */
 .slogan{
