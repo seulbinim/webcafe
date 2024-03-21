@@ -2,6 +2,6 @@ div{
   background: yellow;
 
   & ul{
-    background: pink;
+    background: lime;
   }
 }
