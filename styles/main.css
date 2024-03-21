@@ -188,12 +188,12 @@ fieldset{
   border-top: 2px solid var(--black);
   padding-left: 230px;
   
-  .menu-item{
+  & .menu-item{
     position: relative;
     float: left;
     border-left: 2px solid var(--white);
 
-    button{
+    & button{
       cursor: pointer;
       border: 0;
       background: none;
@@ -204,28 +204,32 @@ fieldset{
       text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
     }
 
-    ul{
+    & ul{
       white-space: nowrap;
       position: absolute;
       bottom: -20px;
       display: none;
 
-      li{
+      & li{
         display: inline-block;
         margin-right: 10px;
       }
     }
 
-    .menu-html, .menu-css, .menu-standards{
+    & .menu-html, 
+    & .menu-css, 
+    & .menu-standards{
       left: 0;
     }
 
-    .menu-accessibility, .menu-qna, .menu-archive{
+    &.menu-accessibility, 
+    & .menu-qna, 
+    & .menu-archive{
       right: 0;
     }
   }
 
-  .menu-item.is-active{
+  & .menu-item.is-active{
 
     button{
       color: #ff0;
@@ -479,6 +483,19 @@ fieldset{
         float: right;
       }
     }
+  }
+}
+
+/* 검색 폼 */
+.search-form{
+  background: yellow;
+
+  .search-input{
+    background: pink;
+  }
+
+  .search-button{
+    background: lime;
   }
 }
 
