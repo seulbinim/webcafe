@@ -1,7 +1,7 @@
 div{
   background: yellow;
 
-  ul{
+  & ul{
     background: pink;
   }
 }
