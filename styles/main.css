@@ -691,8 +691,67 @@ fieldset{
   }
 }
 
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-effect{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: #ccc linear-gradient(#ccc, #eee);
 
+  [class*="-title"]{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 
+  .accent-color{
+    color: var(--orange200);
+  }
+}
+
+.event{
+  margin: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.event-button-wrapper{
+  --spacing: 4px;
+  --size: 20px;
+
+  padding: 4px;
+  height: calc(var(--size) + (var(--spacing) * 2));
+  overflow: hidden;
+
+  button{
+    width: var(--size);
+    height: var(--size);
+    padding: var(--size) 0 0 0;
+    border: 0;
+    background: url(./../assets/bg/back_forward.png) no-repeat;
+    overflow: hidden;
+  }
+
+  .event-button-next{
+    background-position: 100% 0;
+  }
+}
+
+#eventDetail{
+  width: 100%;
+
+  img{
+    box-shadow: 5px 5px 0 0 #aaa;
+    margin-bottom: 10px;
+  }
+
+  em{
+    font-style: normal;
+  }
+}
+
+.related{
+  margin: 10px;
+}
 
 /* 슬로건 */
 .slogan{
