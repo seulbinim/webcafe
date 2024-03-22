@@ -622,39 +622,77 @@ fieldset{
 
 /* 새소식 */
 .news{
-  background: pink;
   position: relative;
+
+  &::before{
+    content: "";
+    background: linear-gradient(to bottom, #aaa 0%, #aaa 50%, transparent 50%, transparent 100%);
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+  }
 
   .news-title{
     color: var(--orange200);
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 35px;
   }
 
   .news-link{
     display: block;
-
-    .news-item{
-      position: relative;
-      margin-top: 35px;
-      padding-left: 130px;
-      background: skyblue;
-
-      .news-item-thumbnail{
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
   }
 
   .news-more{
-    background: yellow;
     position: absolute;
     top: 0;
     right: 0;
   }
 }
+
+.news-item{
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  grid-template-rows: auto 30px auto;
+  grid-template-areas: "thumbnail title"
+                       "thumbnail date"
+                       "thumbnail brief";
+  column-gap: 18px;
+}
+
+.news-item-title{
+  grid-area: title;
+  font-weight: 500;
+}
+
+.news-item-date{
+  grid-area: date;
+  justify-self: end;
+  align-self: center;
+}
+
+.news-item-brief{
+  grid-area: brief;
+  line-height: 1.5;
+}
+
+.news-item-thumbnail{
+  grid-area: thumbnail;
+
+  img{
+    box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
+  }
+
+  figcaption{
+    text-align: center;
+    padding: 15px 0;
+  }
+}
+
+
+
 
 /* 슬로건 */
 .slogan{
