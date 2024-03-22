@@ -595,6 +595,7 @@ fieldset{
   background: yellow;
   display: grid;
   grid-template-columns: 80px 80px 1fr;
+  margin-bottom: 20px;
 
   .notice-tab{
     grid-area: 1/1/2/2;
@@ -619,6 +620,41 @@ fieldset{
 
 }
 
+/* 새소식 */
+.news{
+  background: pink;
+  position: relative;
+
+  .news-title{
+    color: var(--orange200);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .news-link{
+    display: block;
+
+    .news-item{
+      position: relative;
+      margin-top: 35px;
+      padding-left: 130px;
+      background: skyblue;
+
+      .news-item-thumbnail{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .news-more{
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
 
 /* 슬로건 */
 .slogan{
