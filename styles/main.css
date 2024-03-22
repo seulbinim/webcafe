@@ -751,6 +751,40 @@ fieldset{
 
 .related{
   margin: 10px;
+  --size: 25px;
+  --spacing: 4px;
+  --max-size: 147px;
+
+  ul{
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #fff;
+    height: var(--size);
+    overflow: hidden;
+    /* transition-property: height, padding, background;
+    transition-duration: 2s;
+    transition-delay: 0s, 2s, 4s; */
+    transition: height 0.4s 0s ease-in-out, padding 0.4s 0.4s ease-in-out, background 0.4s 0.8s ease-in-out;
+
+    li{
+      height: var(--size);
+      line-height: calc(var(--size) - (var(--spacing) *2));
+      padding: var(--spacing);
+
+      a{
+        display: block;
+        text-indent: 1em;
+      }
+    }
+  }
+
+  ul:hover{
+    height: var(--max-size);
+    padding: 10px 0;
+    background: pink;
+  }
+
 }
 
 /* 슬로건 */
