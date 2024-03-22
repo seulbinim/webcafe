@@ -792,6 +792,67 @@ fieldset{
   margin-top: 20px;
 }
 
+.favorite{
+  margin: 10px;
+  position: relative;
+
+  ol{
+    margin-top: 10px;
+    /* list-style: none; */
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 8px;
+
+    li{
+      counter-increment: number;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      &::before{
+        content: counter(number);
+        background: #aaa;
+        color: #fff;
+        width: 1.5em;
+        text-align: center;
+        font-size: 1.2rem;
+        border-radius: 3px;
+        margin-right: 8px;
+      }
+
+      a{
+        flex-grow: 1;
+      }
+  
+      em{
+        background: url(./../assets/bg/rank.png) no-repeat;
+        width: 9px;
+        height: 11px;
+        /* margin-left: auto; */
+      }
+
+      .up{
+        background-position: 0 0;
+      }
+
+      .stop{
+        background-position: 0 50%;
+      }
+
+      .down{
+        background-position: 0 100%;
+      }
+    }
+  }
+
+  .favorite-more{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 /* 슬로건 */
 .slogan{
   background-color: teal;
