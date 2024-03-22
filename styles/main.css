@@ -592,17 +592,29 @@ fieldset{
 } */
 
 .board{
-  background: yellow;
   display: grid;
   grid-template-columns: 80px 80px 1fr;
+  grid-template-rows: 30px auto;
   margin-bottom: 20px;
+
+  .board-tab{
+    background: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .is-select.board-tab{
+    background: #fff;
+    border-color: var(--orange200) var(--orange200) transparent var(--orange200);
+    color: var(--orange200);
+  }
 
   .notice-tab{
     grid-area: 1/1/2/2;
   }
 
   .acrhive-tab{
-    grid-area: 1/2/2/3;
+    grid-area: 1/2/2/3; 
   }
 
   .notice-list{
@@ -618,6 +630,9 @@ fieldset{
     display: none;
   }
 
+  ul{
+    margin-top: 20px;
+  }
 }
 
 /* 새소식 */
