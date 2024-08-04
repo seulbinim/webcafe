@@ -1,7 +1,0 @@
-div{
-  background: yellow;
-
-  & ul{
-    background: lime;
-  }
-}
